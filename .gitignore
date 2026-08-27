@@ -38,3 +38,12 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# LaTeX build artifacts
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+
+# Font commerciali del template CV: NON ridistribuibili in un repo pubblico
+cv/fonts/

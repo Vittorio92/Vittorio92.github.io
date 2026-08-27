@@ -1,0 +1,15 @@
+% Testata compatta: nome su una riga sola + filetto.
+% Le due decorazioni tikz verticali dell'originale costavano ~2cm di altezza.
+\newcommand{\nametitle}[2]{
+\rightminipageonly{%
+    {\fontsize{\topnamesizevalue pt}{\topnamesizevalue pt}\selectfont
+        {\color{nametoptxt}\bfseries\MakeUppercase{\textls[\topnamestretch]{#1}}}%
+        \hspace{0.4em}%
+        {\color{namebottomtxt}\MakeUppercase{\textls[\bottomnamestretch]{#2}}}%
+    }
+
+    \vspace{0.25em}
+
+    {\color{namelines}\noindent\rule{\textwidth}{\sectionlinethickness}}
+}
+}

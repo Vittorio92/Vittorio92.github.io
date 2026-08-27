@@ -1,0 +1,13 @@
+% Il titolo di sezione sta SOPRA il contenuto, a piena larghezza.
+% Nella versione originale stava in una colonna a sinistra: l'estrazione testo
+% (pdftotext, e quindi i parser ATS) lo riordinava in fondo alla sezione.
+\newcommand{\cvsection}[2]{
+    \setlength\topsep{0pt}%
+    \noindent\begin{minipage}{\textwidth}%
+        \section{\MakeUppercase{#1}}%
+        \vspace{-0.55\baselineskip}%
+        \textcolor{secline}{\noindent\rule{\textwidth}{\sectionlinethickness}}%
+    \end{minipage}%
+    \par\vspace{0.35\baselineskip}%
+    \input{EDITABLE-sections/#2.tex}%
+}

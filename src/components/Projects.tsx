@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Star, GitFork, ExternalLink, Github, FolderGit2 } from 'lucide-react';
+import { ExternalLink, Github, FolderGit2 } from 'lucide-react';
 import { projectsData, Project } from '@/data/portfolioData';
 
 export const Projects: React.FC = () => {
@@ -12,6 +12,7 @@ export const Projects: React.FC = () => {
     { id: 'all', label: 'Tutti i Progetti' },
     { id: 'web', label: 'Web Applications' },
     { id: 'fullstack', label: 'Full-Stack' },
+    { id: 'security', label: 'Security & Blockchain' },
     { id: 'ai', label: 'AI & Data' },
     { id: 'tool', label: 'CLI & Tools' },
   ];
@@ -171,7 +172,7 @@ export const Projects: React.FC = () => {
                     color: 'var(--text-secondary)'
                   }}
                 >
-                  {/* Repo Stats & Primary Language */}
+                  {/* Primary Language */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontWeight: 600 }}>
                       <span 
@@ -184,16 +185,6 @@ export const Projects: React.FC = () => {
                         }} 
                       />
                       <span style={{ color: 'var(--text-primary)' }}>{project.language}</span>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 600 }}>
-                      <Star size={15} color="#d97706" />
-                      <span>{project.stars}</span>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 600 }}>
-                      <GitFork size={15} />
-                      <span>{project.forks}</span>
                     </div>
                   </div>
 

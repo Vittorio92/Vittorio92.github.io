@@ -1,0 +1,22 @@
+\newcommand{\leftminipage}[1]{%
+    \begin{minipage}[c]{\leftcolumwidth\textwidth}%
+        #1%
+    \end{minipage}%
+    \hfill%
+}
+
+\newcommand{\rightminipage}[1]{%
+    \begin{minipage}[c]{\rightcolumwidth\textwidth}%
+        #1%
+    \end{minipage}%
+}
+
+\newcommand{\rightminipageonly}[1]{%
+    \setlength\topsep{0pt}%
+    \begin{flushleft}%
+    \begin{minipage}[t]{\rightcolumwidth\textwidth}%
+    
+        #1%
+    \end{minipage}%
+    \end{flushleft}%
+}
