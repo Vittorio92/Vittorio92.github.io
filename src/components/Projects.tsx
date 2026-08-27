@@ -12,7 +12,7 @@ export const Projects: React.FC = () => {
     { id: 'all', label: 'Tutti i Progetti' },
     { id: 'web', label: 'Web Applications' },
     { id: 'fullstack', label: 'Full-Stack' },
-    { id: 'security', label: 'Security & Blockchain' },
+    { id: 'security', label: 'Security' },
     { id: 'ai', label: 'AI & Data' },
     { id: 'tool', label: 'CLI & Tools' },
   ];
@@ -61,20 +61,20 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div 
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))', 
-            gap: '2rem' 
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))',
+            gap: '2rem'
           }}
         >
           {filteredProjects.map((project) => (
-            <div 
-              key={project.id} 
+            <div
+              key={project.id}
               className="glass-card"
-              style={{ 
-                padding: '2.25rem 2rem', 
-                display: 'flex', 
+              style={{
+                padding: '2.25rem 2rem',
+                display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 position: 'relative'
@@ -90,11 +90,11 @@ export const Projects: React.FC = () => {
                     </span>
                   </div>
                   {project.featured && (
-                    <span 
-                      style={{ 
-                        fontSize: '0.75rem', 
-                        padding: '0.25rem 0.75rem', 
-                        borderRadius: 'var(--radius-full)', 
+                    <span
+                      style={{
+                        fontSize: '0.75rem',
+                        padding: '0.25rem 0.75rem',
+                        borderRadius: 'var(--radius-full)',
                         background: 'rgba(99, 102, 241, 0.1)',
                         color: 'var(--accent-primary)',
                         fontWeight: 700,
@@ -107,11 +107,11 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 
-                  style={{ 
+                <h3
+                  style={{
                     fontFamily: 'var(--font-heading)',
-                    fontSize: '1.4rem', 
-                    fontWeight: 700, 
+                    fontSize: '1.4rem',
+                    fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '0.85rem',
                     cursor: 'pointer',
@@ -123,10 +123,10 @@ export const Projects: React.FC = () => {
                 </h3>
 
                 {/* Description */}
-                <p 
-                  style={{ 
-                    color: 'var(--text-secondary)', 
-                    fontSize: '0.98rem', 
+                <p
+                  style={{
+                    color: 'var(--text-secondary)',
+                    fontSize: '0.98rem',
                     lineHeight: 1.65,
                     marginBottom: '1.5rem',
                     display: '-webkit-box',
@@ -141,7 +141,7 @@ export const Projects: React.FC = () => {
                 {/* Tech Tags */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginBottom: '2rem' }}>
                   {project.tags.map((tag, idx) => (
-                    <span 
+                    <span
                       key={idx}
                       style={{
                         fontSize: '0.8rem',
@@ -161,10 +161,10 @@ export const Projects: React.FC = () => {
 
               {/* Footer Meta & Action Links */}
               <div>
-                <div 
-                  style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
                     justifyContent: 'space-between',
                     paddingTop: '1.25rem',
                     borderTop: '1px solid var(--border-color)',
@@ -175,14 +175,14 @@ export const Projects: React.FC = () => {
                   {/* Primary Language */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontWeight: 600 }}>
-                      <span 
-                        style={{ 
-                          width: '10px', 
-                          height: '10px', 
-                          borderRadius: '50%', 
+                      <span
+                        style={{
+                          width: '10px',
+                          height: '10px',
+                          borderRadius: '50%',
                           backgroundColor: getLanguageColor(project.language),
-                          display: 'inline-block' 
-                        }} 
+                          display: 'inline-block'
+                        }}
                       />
                       <span style={{ color: 'var(--text-primary)' }}>{project.language}</span>
                     </div>
@@ -195,8 +195,8 @@ export const Projects: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Vedi Repository GitHub"
-                      style={{ 
-                        color: 'var(--text-secondary)', 
+                      style={{
+                        color: 'var(--text-secondary)',
                         transition: 'color 0.2s',
                         display: 'flex',
                         alignItems: 'center',
@@ -212,8 +212,8 @@ export const Projects: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Vedi Live Demo"
-                        style={{ 
-                          color: 'var(--accent-secondary)', 
+                        style={{
+                          color: 'var(--accent-secondary)',
                           transition: 'color 0.2s',
                           display: 'flex',
                           alignItems: 'center',
@@ -231,7 +231,7 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* GitHub External Callout Box */}
-        <div 
+        <div
           className="glass-card"
           style={{
             marginTop: '4rem',
@@ -246,7 +246,7 @@ export const Projects: React.FC = () => {
             Vuoi vedere altri progetti o contributi?
           </h3>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '580px', margin: '0 auto 1.75rem auto', fontSize: '1.05rem' }}>
-            Visita il mio profilo ufficiale GitHub per vedere tutte le repository pubbliche, gists e contributi open source.
+            Visita il mio profilo ufficiale GitHub per vedere tutte le repository pubbliche e contributi open source.
           </p>
           <a
             href="https://github.com/Vittorio92"
