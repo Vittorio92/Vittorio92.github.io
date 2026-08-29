@@ -27,6 +27,17 @@ export const personalData = {
 
 export const projectsData: Project[] = [
   {
+    id: "bft-trust-cpabe-sdn",
+    title: "Progetto Network Security",
+    description: "Testbed Docker per il consenso bizantino in reti SDN multi-controller: PBFT e HotStuff pesati sulla reputazione dei nodi, con l'accesso ai dati governato da cifratura CP-ABE.",
+    longDescription: "Testbed containerizzato per lo studio del consenso bizantino in una rete SDN multi-controller. L'ambiente è composto da quattro immagini Docker: il setuper genera le chiavi ECDSA (prime256v1) per l'autenticazione dei nodi e inizializza i parametri CP-ABE, mentre il controller opera come Key Generation Center distribuendo le chiavi basate su attributi, così che l'accesso ai dati dipenda da una policy e non dall'identità del richiedente. I nodi implementano tre protocolli di consenso messi a confronto — PBFT, Basic HotStuff e Chained HotStuff — nelle varianti trust-aware: il peso di ciascun nodo deriva da una reputazione aggiornata con premi e punizioni, soglie adattive, decadimento temporale, analisi dell'andamento storico e una confidenza pesata sul numero di interazioni osservate. La resilienza viene misurata iniettando comportamenti scorretti — nodi lenti o apertamente bizantini — mentre la rete è emulata con un controller Ryu e topologie Mininet fat-tree, mesh e lineari. Una campagna di test di scalabilità determina il limite empirico di PBFT su taglie da 10 a 40 nodi e confronta le varianti alle stesse dimensioni. Le primitive CP-ABE poggiano sulle librerie C pbc e libbswabe, compilate da sorgente dentro i container.",
+    githubUrl: "https://github.com/Vittorio92/Network-Security-Project",
+    language: "Python",
+    tags: ["Python", "Docker", "CP-ABE", "ECDSA", "PBFT", "HotStuff", "SDN", "Ryu", "Mininet"],
+    featured: true,
+    category: "security"
+  },
+  {
     id: "ecommerce-iam",
     title: "Progetto Piattaforme Web",
     description: "E-commerce full-stack con autenticazione e autorizzazione federate: backend Spring Boot configurato come OAuth 2.0 Resource Server, con le identità gestite da Keycloak.",
