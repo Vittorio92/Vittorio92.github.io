@@ -69,29 +69,6 @@ export const projectsData: Project[] = [
     tags: ["Python", "PyMuPDF", "MongoDB", "customtkinter"],
     featured: false,
     category: "tool"
-  },
-  {
-    id: "kenken-java",
-    title: "KenKen Project",
-    description: "Implementazione in Java del gioco logico KenKen, costruita attorno all'applicazione sistematica dei design pattern.",
-    longDescription: "Sviluppo del gioco di logica KenKen in Java, con l'obiettivo didattico di applicare i design pattern alla progettazione di un'applicazione completa: generazione della griglia, validazione dei vincoli aritmetici sulle gabbie e gestione dell'interazione di gioco.",
-    githubUrl: "https://github.com/Vittorio92/KenKenProject",
-    language: "Java",
-    tags: ["Java", "Design Pattern", "OOP"],
-    featured: false,
-    category: "tool"
-  },
-  {
-    id: "portfolio-nextjs",
-    title: "Vittorio92.github.io",
-    description: "Sito portfolio personale sviluppato con Next.js 15, React e TypeScript, con esportazione statica e deploy automatico su GitHub Pages.",
-    longDescription: "Portfolio personale costruito con Next.js 15 in modalità static export. Design system basato su variabili CSS, schede interattive per i repository GitHub, sezione contatti e pipeline di deploy automatizzata con GitHub Actions verso GitHub Pages.",
-    githubUrl: "https://github.com/Vittorio92/Vittorio92.github.io",
-    liveUrl: "https://vittorio92.github.io",
-    language: "TypeScript",
-    tags: ["Next.js", "React", "TypeScript", "GitHub Actions", "GitHub Pages"],
-    featured: false,
-    category: "web"
   }
 ];
 

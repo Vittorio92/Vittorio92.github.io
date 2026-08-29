@@ -135,8 +135,9 @@ body {
 .section-subtitle {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 680px;
+  max-width: 920px;
   margin-top: 0.75rem;
+  margin-inline: auto;
 }
 
 /* Gradient Text Effect */

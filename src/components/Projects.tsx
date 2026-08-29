@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
     { id: 'security', label: 'Security' },
     { id: 'ai', label: 'AI & Data' },
     { id: 'tool', label: 'CLI & Tools' },
-  ];
+  ].filter((cat) => cat.id === 'all' || projectsData.some((p) => p.category === cat.id));
 
   const filteredProjects = activeCategory === 'all'
     ? projectsData
