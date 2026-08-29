@@ -69,13 +69,17 @@
   \setkeys{cvexp}{#1}
   \color{bodytxt}
   \rightminipageonly{
-  \begin{minipage}[t]{\segmenttitlesareavalue\textwidth}
-    \ifthenelse{\equal{\uppercasetitle}{yes}}{\titlestyle{\MakeUppercase{\title}}}{\titlestyle{\title}}
-  \end{minipage}%
-    \hfill%
-  \begin{minipage}[t]{\datesareavalue\textwidth}
-    \RaggedLeft{\datesstyle{\dates}}
-  \end{minipage}%
+  \ifthenelse{\equal{\dates}{}}{%
+    \ifthenelse{\equal{\uppercasetitle}{yes}}{\titlestyle{\MakeUppercase{\title}}}{\titlestyle{\title}}%
+  }{%
+    \begin{minipage}[t]{\segmenttitlesareavalue\textwidth}
+      \ifthenelse{\equal{\uppercasetitle}{yes}}{\titlestyle{\MakeUppercase{\title}}}{\titlestyle{\title}}
+    \end{minipage}%
+      \hfill%
+    \begin{minipage}[t]{\datesareavalue\textwidth}
+      \RaggedLeft{\datesstyle{\dates}}
+    \end{minipage}%
+  }%
   \ifthenelse{
     \equal{\subtitle}{} \AND \equal{\location}{}
   }{}{

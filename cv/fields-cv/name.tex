@@ -1,15 +1,26 @@
-% Testata compatta: nome su una riga sola + filetto.
-% Le due decorazioni tikz verticali dell'originale costavano ~2cm di altezza.
-\newcommand{\nametitle}[2]{
+\newcommand{\nametitle}[2]{%
 \rightminipageonly{%
-    {\fontsize{\topnamesizevalue pt}{\topnamesizevalue pt}\selectfont
-        {\color{nametoptxt}\bfseries\MakeUppercase{\textls[\topnamestretch]{#1}}}%
-        \hspace{0.4em}%
-        {\color{namebottomtxt}\MakeUppercase{\textls[\bottomnamestretch]{#2}}}%
-    }
-
-    \vspace{0.25em}
-
-    {\color{namelines}\noindent\rule{\textwidth}{\sectionlinethickness}}
-}
+    \begin{minipage}[c]{0.72\linewidth}
+        {\fontsize{\topnamesizevalue pt}{\topnamesizevalue pt}{%
+            \color{nametoptxt} \bf
+            \!\!\MakeUppercase{\textls[\topnamestretch]{#1}}%
+        }}%
+        
+        \vspace{0.25cm}
+        
+        {\fontsize{\bottomnamesizevalue}{\bottomnamesizevalue}{%
+            \color{namebottomtxt}
+            \!\MakeUppercase{\textls[\bottomnamestretch]{#2}}%
+        }}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[c]{0.26\linewidth}
+        \RaggedLeft
+        \begin{tikzpicture}
+            \clip (0,0) circle (0.95cm);
+            \node at (0,0) {\includegraphics[width=1.95cm]{profile.jpg}};
+            \draw[nametoptxt, line width=1pt] (0,0) circle (0.95cm);
+        \end{tikzpicture}
+    \end{minipage}%
+}%
 }
