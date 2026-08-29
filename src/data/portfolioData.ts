@@ -38,17 +38,6 @@ export const projectsData: Project[] = [
     category: "security"
   },
   {
-    id: "ecommerce-iam",
-    title: "Progetto Piattaforme Web",
-    description: "E-commerce full-stack con autenticazione e autorizzazione federate: backend Spring Boot configurato come OAuth 2.0 Resource Server, con le identità gestite da Keycloak.",
-    longDescription: "Piattaforma e-commerce realizzata per l'esame di Piattaforme Web. Il backend REST in Spring Boot 3.1 è configurato come OAuth 2.0 Resource Server: valida i token JWT tramite l'endpoint JWKS di Keycloak e applica un controllo degli accessi basato sui ruoli di realm (RBAC), attraverso un converter custom che traduce il JWT in un authentication token di Spring Security. Il frontend Angular 16 si integra via OpenID Connect con keycloak-angular e angular-oauth2-oidc, delegando all'Identity Provider l'intera gestione della sessione. Persistenza su MySQL con Spring Data JPA e Hibernate.",
-    githubUrl: "https://github.com/Vittorio92/progettoPiattaformeWeb",
-    language: "Java",
-    tags: ["Java", "Spring Boot", "Spring Security", "OAuth 2.0", "Keycloak", "JWT", "Angular", "MySQL"],
-    featured: true,
-    category: "fullstack"
-  },
-  {
     id: "proof-of-time",
     title: "Progetto Sistemi Informativi",
     description: "Proof of Time: piattaforma anticontraffazione per orologi di lusso, che àncora l'identità fisica del bene a una blockchain permissioned.",
@@ -80,6 +69,17 @@ export const projectsData: Project[] = [
     tags: ["Python", "PyMuPDF", "MongoDB", "customtkinter"],
     featured: false,
     category: "tool"
+  },
+  {
+    id: "ecommerce-iam",
+    title: "Progetto Piattaforme Web",
+    description: "E-commerce full-stack con autenticazione e autorizzazione federate: backend Spring Boot configurato come OAuth 2.0 Resource Server, con le identità gestite da Keycloak.",
+    longDescription: "Piattaforma e-commerce realizzata per l'esame di Piattaforme Web. Il backend REST in Spring Boot 3.1 è configurato come OAuth 2.0 Resource Server: valida i token JWT tramite l'endpoint JWKS di Keycloak e applica un controllo degli accessi basato sui ruoli di realm (RBAC), attraverso un converter custom che traduce il JWT in un authentication token di Spring Security. Il frontend Angular 16 si integra via OpenID Connect con keycloak-angular e angular-oauth2-oidc, delegando all'Identity Provider l'intera gestione della sessione. Persistenza su MySQL con Spring Data JPA e Hibernate.",
+    githubUrl: "https://github.com/Vittorio92/progettoPiattaformeWeb",
+    language: "Java",
+    tags: ["Java", "Spring Boot", "Spring Security", "OAuth 2.0", "Keycloak", "JWT", "Angular", "MySQL"],
+    featured: true,
+    category: "fullstack"
   }
 ];
 
